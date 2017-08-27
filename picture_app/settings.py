@@ -25,7 +25,7 @@ SECRET_KEY = '!krf#jd3y&2_+y29dogjst@8e&u%bs#bo+1$wc8!e39+)41#%c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['qbecker.pythonanywhere.com',]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
