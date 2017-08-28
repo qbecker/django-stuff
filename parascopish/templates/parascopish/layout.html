@@ -8,6 +8,8 @@
           <div class="container-fluid">
             <div class="navbar-header">
               <a class="navbar-brand" href="#">Quinten Becker</a>
+              
+             
             </div>
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
@@ -30,6 +32,9 @@
         <body>
             <div class="row">
                 <div class = "col-md-8">
+                  {%  if user.is_authenticated %}
+                   <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                  {% endif %}
                     {% block content %}
                     {% endblock %}
                 </div>

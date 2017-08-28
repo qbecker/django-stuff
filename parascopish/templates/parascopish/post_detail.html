@@ -1,10 +1,11 @@
 {% extends  'parascopish/layout.html' %}
 {% block content %}
-    {%for post in posts %}
+    
     <div>
         <p>published: {{ post.publish_date }}</p>
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
-    {% endfor %}
+    
 {% endblock %}

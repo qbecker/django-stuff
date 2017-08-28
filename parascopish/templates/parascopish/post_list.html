@@ -1,10 +1,17 @@
 {% extends  'parascopish/layout.html' %}
 {% block content %}
-    {%for post in posts %}
-    <div>
-        <p>published: {{ post.publish_date }}</p>
-        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+    <h1>Welcome!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                {%for post in posts %}
+                <div>
+                    <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                    <p>{{ post.short_description|linebreaksbr }}</p>
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    {% endfor %}
 {% endblock %}

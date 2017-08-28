@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^parascopish', include('parascopish.urls')),
+    url(r'^parascopish/', include('parascopish.urls')),
 ]
