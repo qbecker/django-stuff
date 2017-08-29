@@ -1,10 +1,14 @@
 {% extends  'parascopish/layout.html' %}
 {% block content %}
-    
+{% load static %}
     <div>
         <p>published: {{ post.publish_date }}</p>
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <H1>{{post.filename}}</H1>
+        {% load static %}
+       <img src= "{%static ""%}{{post.filename}}" >Name</a>
+        
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
     
